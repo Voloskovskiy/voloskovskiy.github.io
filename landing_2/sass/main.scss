@@ -495,7 +495,7 @@ h3{
   display: none;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 2vh;
   @include row-flex();
   @include col();
   @include col-3();
@@ -517,7 +517,7 @@ h3{
     display: block;}
 
 a{
-	font-size:2vw;
+  font-size:2vw;
   background: #f7f7f7;
   text-align: center;
   padding: 20px 0;
