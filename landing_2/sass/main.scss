@@ -465,10 +465,17 @@ h3{
 			@include offset(1);
 			margin-top:0.5vw;
 			margin-bottom:0.5vw;
-
+				.copiryght{
+					@include col();
+					@include col-sm-12();
+					@include col-xs-12();
+					text-align:center;
+				}
 				.follow{
 					font-size: 5vh;
-
+					@include col();
+					@include col-sm-12();
+					@include col-xs-12();text-align:center;
 						a{
 							font-size:5vh;
 						}					
