@@ -58,7 +58,7 @@ h3{
 	flex-direction: column;
 	@include align-items(center);
 	position:relative;
-	z-index:20;
+	z-index:2;
 	height: 100vh;
 }
 .home{	
@@ -102,7 +102,8 @@ h3{
 		.navbar{
 			@include row-flex();
 			@include col();
-			@include col-5();
+			@include col-6();
+			@include col-md-6();
 			@include justify-content(space-between);
 				a:hover{
 					color:orange;	
@@ -151,6 +152,8 @@ h3{
 }
 
 .service{
+	position:relative;
+	z-index:1;
 	height:auto;
 	@include justify-content(center);
 	@include align-items(center);
@@ -180,6 +183,8 @@ h3{
 		}
 }
 .portfolio{
+	position:relative;
+	z-index:1;
 	background-color: #f7f7f7;
 	height:auto;
 
@@ -216,6 +221,8 @@ h3{
 		}
 }
 .about_us{
+	position:relative;
+	z-index:1;
 	height:auto;
 	text-align:center;
 	
@@ -280,6 +287,8 @@ h3{
 		}
 }
 .we{
+	position:relative;
+	z-index:1;
 	height:auto;	
 	background-color: #f7f7f7;
 	text-align:center;
@@ -334,6 +343,8 @@ h3{
 
 
 .contact{
+	position:relative;
+	z-index:1;
 	text-align:center;
 	height:auto;
 	background-color: #222222;
@@ -470,4 +481,67 @@ h3{
 					color:orange;
 				}				
 		}
+}
+.mob_line{
+	
+	@include row-flex();
+	@include col();
+	@include col-12();
+	@include justify-content(flex-end);
+	text-align:right;
+	display: none;
+}
+.mobile{
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  @include row-flex();
+  @include col();
+  @include col-3();
+  @include justify-content(center);
+  z-index:3;
+  div{
+    display: none;}
+  button{    
+    overflow: hidden;    
+    background: #f7f7f7 url(http://i.imgur.com/vKRaKDX.png) center no-repeat;
+    border: 1px solid #f7f7f7;
+    border-radius: 4px;
+    background-size: 80%;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    }
+  a{
+    display: block;}
+
+a{
+	font-size:2vw;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f7f7f7;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+a:hover{
+	color:orange;
+}
+}
+
+
+@media (max-width: 880px){
+	.mob_line{
+		display: flex;
+	}
+  .mobile{
+    display: block !important;
+  }
+  .header{
+		  .navbar{
+		    display: none;
+		  }
+	}
 }
