@@ -493,7 +493,7 @@ h3{
 	
 	@include row-flex();
 	@include col();
-	@include col-12();
+	@include col-6();
 	@include justify-content(flex-end);
 	text-align:right;
 	display: none;
