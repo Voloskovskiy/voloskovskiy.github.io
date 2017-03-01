@@ -227,9 +227,9 @@ h3 {
 	width: 11px;
 	height: 11px;
 	margin: -4px 0 0 -4px;
-	background: transparent;
+	background: white;
 	box-sizing: border-box;
-	border: 1px solid #24221F;
+	border: 1.5px solid #ffa424;
 }
 
 
@@ -289,7 +289,8 @@ header{
 	@include col-10();	
 	@include offset(1);
 	position:fixed;
-	top:2vw;	
+	top:2vw;
+	font-size:1rem;
 }
 .logo{
 	@include col();
@@ -312,10 +313,10 @@ header{
 }
 span{
 	text-align:left;
-	font-size: 3.5vh;
+	font-size: 2.0vw;
 }
 .promo{
-	margin-top:15vw;
+	//margin-top:-1.5%;
 	@include row-flex();	
 	@include align-items(center);
 	@include col();
@@ -324,22 +325,29 @@ span{
 	@include offset-xs(0);
 	@include xs(margin-left,0)
 	@include xs(width,100%);
+	@include sm(margin-left,0)
+	@include sm(width,100%);
+	@include xs(margin-top,-30%);
 	.promo_graf{
 		@include col();
 		@include col-7();
+		@include col-sm-6();
+		@include offset-sm(3);
 		@include col-xs-10();
-		@include offset-xs(1);
-		
+		@include offset-xs(1);		
 	}
 	.contact_back{
 		@include col();
 		@include col-5();
 		@include col-xs-12();
+		@include col-sm-12();
 		@include xs(margin-top,10vw);
 		color: white;
 		font-size: 2vh;
 		@include xs(position,absolute);
 		@include xs(bottom,0);
+		@include sm(position,absolute);
+		@include sm(bottom,0);
 		
 		.info{
 			@include row-flex();
@@ -347,11 +355,11 @@ span{
 			background:rgba(150,62,200, .85);
 				h3{
 					text-align:left;
+					font-size:1,5rem;
 					@include col();
 					@include col-12();
-					@include col-xs-10();
-					padding-bottom:1vw;	
-					@include offset-xs(1);
+					@include col-xs-12();
+					padding-bottom:1vw;
 				}				
 		}
 		
@@ -360,28 +368,17 @@ span{
 button{
 	padding:10px 0px;
 	margin-bottom:2vw;
-  	border: 2px solid white;
 	position: relative;
 	font-size: 3vh;
 	@include col();
 	@include col-6();	
-	@include col-sm-10();
-	@include col-xs-10();
-	@include offset-sm(1);
+	@include col-sm-6();
+	@include col-xs-12();
+	@include offset-sm(0);
 	@include xs(text-align, left);
 	@include xs(padding-left, 20px);
-	@include offset-xs(1);
 }					
-//Colors
-$background: #fefefe;
-$text: #4b507a;
 
-$cyan: #60daaa;
-$yellow: #fbca67;
-$orange: #ff8a30;
-$red: #f45e61;
-$purple: #6477b9;
-$blue: #0eb7da;
 
 // Basic styles
 button {
@@ -391,8 +388,6 @@ button {
   color: white;
   font-size: inherit;
   font-weight: 700;
-  //margin: 1em;
-  //padding: 1em 2em;
   text-align: center;
   text-transform: capitalize;
 
@@ -415,7 +410,7 @@ button {
 
   &::before,
   &::after {
-    border: 2px solid transparent; // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent; 
     width: 0;
     height: 0;
   }
@@ -457,6 +452,6 @@ button {
     transition:
       border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
       width 0.35s ease-out 0.5s, // And then exanding width
-      height 0.15s ease-out 0.75s; // And finally height
+      height 0.15s ease-out 0.85s; // And finally height
   }
 }
