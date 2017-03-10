@@ -29,3 +29,8 @@ function mask(event) {
     var input = document.querySelector("input");
     input.addEventListener("input", mask, false)
 });
+$('#add_product').click(function () {
+       $('.plus').css({'display':'flex'});
+       $('#add_product').css({'background':'#ffad15'});
+       document.getElementById('status').innerHTML = "<b>В ЗАКАЗЕ</b>";
+    })
