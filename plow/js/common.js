@@ -29,8 +29,30 @@ function mask(event) {
     var input = document.querySelector("input");
     input.addEventListener("input", mask, false)
 });
-$('#add_product').click(function () {
+
+$('#add_product').click(function () { var count=0;
        $('.plus').css({'display':'flex'});
-       $('#add_product').css({'background':'#ffad15'});
-       document.getElementById('status').innerHTML = "<b>В ЗАКАЗЕ</b>";
+
+	       $('.plus .btn').click(function () {
+	       	
+	       	if(this.classList.contains('btn_active'))
+	       	{
+	       		count=count-1;
+	       		$(this).removeClass('btn_active');	
+				
+	       		if(count==0){
+	       			a.innerHTML='ЗАКАЗАТЬ';
+	       			$('#add_product').removeClass('btn_active');
+	       	}
+	       		     		
+	       	}
+	       	else
+	       	{	count++;
+	       		$(this).addClass('btn_active');
+	       		$('#add_product').addClass('btn_active');
+	       		a.innerHTML='В ЗАКАЗЕ';  
+
+	       	}       
+	       });
+       
     })
