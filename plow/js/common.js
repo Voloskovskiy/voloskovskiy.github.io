@@ -30,29 +30,33 @@ function mask(event) {
     input.addEventListener("input", mask, false)
 });
 
-$('#add_product').click(function () { var count=0;
-       $('.plus').css({'display':'flex'});
+$(".add_product").click(function () {
+    
 
-	       $('.plus .btn').click(function () {
-	       	
-	       	if(this.classList.contains('btn_active'))
-	       	{
-	       		count=count-1;
-	       		$(this).removeClass('btn_active');	
-				
-	       		if(count==0){
-	       			a.innerHTML='ЗАКАЗАТЬ';
-	       			$('#add_product').removeClass('btn_active');
-	       	}
-	       		     		
-	       	}
-	       	else
-	       	{	count++;
-	       		$(this).addClass('btn_active');
-	       		$('#add_product').addClass('btn_active');
-	       		a.innerHTML='В ЗАКАЗЕ';  
+	var Hide=$(this).parent("div.right_details");
+    var h=$(Hide).parent("div.select");
+	$(h).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
+	$(h).children("img").css('opacity','0.3');
+    $(h).children(".item_title").css('opacity','0.3');
+	$(this).addClass('btn_active');
 
-	       	}       
+	       $('.add_product').click(function () {
+	       	$(this).addClass('btn_active');
+			  
 	       });
        
-    })
+    });
+var ch=0;
+$(".toggle").click(function () {
+    
+ch=ch+1;
+if(ch==1){
+    $(".mobile_menu").append('<li class="menu_item"><a href=""><b>SUP</b></a></li><li class="menu_item"><a href=""><b>SUP</b></a></li><li class="menu_item"><a href=""><b>SUP</b></a></li>');
+}
+else{
+    $(".menu_item").remove();
+    ch=0;
+}
+
+
+});
