@@ -46,6 +46,22 @@ $(".add_product").click(function () {
 	       });
        
     });
+$(".add_product_none").click(function () {
+    
+
+    var Hide=$(this).parent("div.right_details");
+    var h=$(Hide).parent("div.select");
+    $(h).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span></div><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
+    $(h).children("img").css('opacity','0.3');
+    $(h).children(".item_title").css('opacity','0.3');
+    $(this).addClass('btn_active');
+
+           $('.add_product').click(function () {
+            $(this).addClass('btn_active');
+              
+           });
+       
+    });
 var ch=0;
 $(".toggle").click(function () {
     
