@@ -32,62 +32,46 @@ function mask(event) {
 
 $(".add_product").click(function () {
     
-
-	var Hide=$(this).parent("div.right_details");
-    var h=$(Hide).parent("div.select");
-	$(h).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
-	$(h).children("img").css('opacity','0.3');
-    $(h).children(".item_title").css('opacity','0.3');
+//    $("img").css('opacity','1');
+    $(".plus").remove()
+	var h=$(this).parent("div.item");
+    var sel=$(h).children("div.select");
+	$(sel).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
+	 $("img").addClass("opa");
+    $(sel).children("img").addClass('opa1');
 	$(this).addClass('btn_active');
 
 	       $('.add_product').click(function () {
-	      // 	$(this).addClass('btn_active');
+	      	$(this).addClass('btn_active');
+
 			  
 	       });
        
     });
 
-$('.item').hover(
-       function(){ 
-        var Hide=$(this).parent("div.right_details");
-        var Hide2=$(this).parent("div.item_none");
-        var Hover=$(this).children("div.select");
-        $(Hover).children("img").css('opacity','0.3');
-        $(Hide2).children(".item_title").css('opacity','0.3');
-       // $(Hover).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span></div><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
-        $(Hover).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
-    
-        $(".add_product").click(function () {   
-    
-
-    var Hide=$(this).parent("div.right_details");
-    var Hide2=$(this).parent("div.item");
-
-    var h=$(Hide).parent("div.select");
-    var h2=$(Hide2).children("div.btn");
-   // $(h).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
-   //  $(Hover).children("img").css('opacity','0.3');
-    //$(Hide2).children(".item_title").css('opacity','0.3');
+$(".add_product_none").click(function () {
+   
+    //$(sel).children("img").css('opacity','0.3');
     $(this).addClass('btn_active');
 
-           $(h2).click(function () {
+           $('.add_product').click(function () {
             $(this).addClass('btn_active');
               
            });
        
-    }); },
-       function(){$(".plus").remove()
-        var none=$(this).children("div.select");
-        $(none).children("img").css('opacity','1');}
-);
+    });
 $('.item_none').hover(
        function(){ 
+        $("img").removeClass('opa1');
+         $("img").removeClass('opa');
+
+       // $(img).addClass("opa");
         $(".plus").remove()
         var Hide=$(this).parent("div.right_details");
         var Hide2=$(this).parent("div.item_none");
         var Hover=$(this).children("div.select");
-        $(Hover).children("img").css('opacity','0.3');
-        $(Hide2).children(".item_title").css('opacity','0.3');
+        $(Hover).children("img").addClass('opa1');
+       // $(Hide2).children(".item_title").css('opacity','0.3');
        // $(Hover).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span></div><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
         $(Hover).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
     
@@ -100,8 +84,8 @@ $('.item_none').hover(
     var h=$(Hide).parent("div.select");
     var h2=$(Hide2).children("div.btn");
    // $(h).append('<div class="plus"><div class="offer"><span>Плов (праздничный)</span><span>Выберите порцию:</span></div><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><a><div class="add_product btn"><span>100гр</span><span>200p</span></div></a><span class="composition">Состав:<br> рис, мясо, морковь, лук, приправы</span></div></div>');
-     $(Hover).children("img").css('opacity','0.3');
-    $(Hide2).children(".item_title").css('opacity','0.3');
+     //$(Hide).children("img").css('opacity','0.3');
+
     $(this).addClass('btn_active');
 
            $(h2).click(function () {
@@ -112,7 +96,9 @@ $('.item_none').hover(
     }); },
        function(){$(".plus").remove()
         var none=$(this).children("div.select");
-        $(none).children("img").css('opacity','1');}
+        $("img").removeClass('opa1');
+         $("img").removeClass('opa');
+    }
 );
 
    
