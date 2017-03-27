@@ -108,7 +108,8 @@ $(".toggle").click(function () {
     
 ch=ch+1;
 if(ch==1){
-    $(".mobile_menu").append('<li><a href="categories.html"><b>Шашлык</b></a></li><li><a href="categories.html"><b>Плов</b></a></li><li><a href="categories.html"><b>Манты</b></a></li><li><a href="categories.html"><b>Суп</b></a></li><li><a href="categories.html"><b>Шашлык</b></a></li><li><a href="categories.html"><b>Плов</b></a></li><li><a href="categories.html"><b>Манты</b></a></li><li><a href="categories.html"><b>Суп</b></a></li>');
+    $(".mobile_menu").append('<li class="menu_item"><a href="categories.html"><b>Шашлык</b></a></li><li class="menu_item"><a href="categories.html"><b>Плов</b></a></li><li class="menu_item"><a href="categories.html"><b>Манты</b></a></li><li class="menu_item"><a href="categories.html"><b>Суп</b></a></li><li class="menu_item"><a href="categories.html"><b>Шашлык</b></a></li><li class="menu_item"><a href="categories.html"><b>Плов</b></a></li><li class="menu_item"><a href="categories.html"><b>Манты</b></a></li><li class="menu_item"><a href="categories.html"><b>Суп</b></a></li>');
+}
 else{
     $(".menu_item").remove();
     ch=0;
