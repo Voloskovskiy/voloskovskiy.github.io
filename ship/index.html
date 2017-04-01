@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<link type="text/css" rel="stylesheet" media="all" href="css/local.css"/> 
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<div class="menu">
+				<nav class="wrapp">
+					<a class="logo" href=""><img src="img/logo.gif"><span>Теплоход "Фалькон"</span></a>
+					<ul>
+						<li><a href="">Главная</a></li>
+						<li><a href="">Аренда теплохода</a></li>
+						<li><a href="">Мероприятия</a></li>
+						<li><a href="#contact">Контакты</a></li>
+						<li class="search_pole"><input type="" name=""></li>
+						<li class="search"><a><i class="icon-search"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="wrapp">
+				<div class="text_info">
+					Взгляни<br>на Москву<br> по-новому
+				</div>
+				<div class="form first_display">
+				<span>Речные прогулки <br>на теплоходе</span>
+					<form>
+						<input type="" name="">
+						<textarea placeholder="Введите текст сообщения." rows="4"></textarea>
+						<a>
+			 			<div class="btn send">
+			 				Оставить зявку
+			 			</div>
+			 			</a>
+					</form>
+				</div>
+				<div class="form message_end">
+					<span>Спасибо за Вашу заявку!</span>
+				</div>
+
+			</div>
+		</div>
+		<div class="content">
+			<div class="wrapp">
+				<h2>О компании</h2>
+				<p>Фалькон - это двухпалубное судно повышенной комфортности с элитной внутренней отделкой из натурального дерева дорогих пород и современным техническим оснащением (таким как климат-контроль, оборудованные санузлы, плазменные панели и качественная аудио-система). На нижней палубе вас ждет роскошь изящного резного декора, столики и бар, а также удобные диваны и караоке-система в носовой части судна. На верхней палубе вы можете в полной мере насладиться речным бризом на открытой площадке или удобно разместиться под крышей на мягких диванах с бокалом освежающего коктейля.</p>
+				<p>Фалькон – семейный теплоход, в который вложена душа, поэтому в любой из 4-х наших зон вы будете чувствовать себя комфортно. Здесь созданы все условия не только для речных прогулок, но и торжественных мероприятий. Мы можем составить яркую программу для вашего юбилея, корпоратива или свадьбы, а наши повара удивят вас изысками на любой вкус.</p>
+			</div>
+		</div>
+		<div id="waterwheel-carousel-default">  
+		  <div class="carousel-controls">  
+			  <div class="carousel-prev">  
+			  	<a href="#"><img src="img/left.gif"></a>
+			  </div>  
+			  <div class="carousel-next">  
+			  	<a href="#"><img src="img/right.gif"></a>
+			  </div>  
+		  </div>  
+		  <div class="carousel-images">  
+			  <img  src="img/item_2.gif"/>  
+			  <img  src="img/item_1.gif"/>  
+			  <img  src="img/item_3.gif"/>  
+			  <img  src="img/item_1.gif"/>  
+		  </div>  
+ 		</div>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/	js/?um=constructor%3A51b9050a2c8f348af255273e83945edb1701750ff26d2b83e3be3215029f7113&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true">
+		</script>
+ 		<div class="footer" id="contact">
+	 		<div class="wrapp">
+	 			<div class="info">
+	 				<span class="text">Наши телефоны:</span>
+	 				<span class="tel">+7 (495) 664-61-96</span>
+	 				<span class="tel">+7 (495) 944-11-12</span>
+	 				<span class="text">Мобильная связь:</span>
+	 				<span class="tel">+7 (926) 235-00-02</span>
+	 			</div>
+	 			<a href="">
+	 			<div class="btn">
+	 				<span>Обратный звонок</span>
+	 			</div>
+	 			</a>
+
+	 		</div> 			
+ 		</div>
+	</div>
+	
+
+	
+	
+
+
+	<script src="js/scripts.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.5.min.js"></script>  
+	<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script> 
+	<script type="text/javascript">  
+		$jqNew = jQuery.noConflict(true);  
+		$jqNew(document).ready(function () {  
+		$jqNew("#waterwheel-carousel-default").waterwheelCarousel();  
+		});  
+	</script> 
+
+</body>
+</html>

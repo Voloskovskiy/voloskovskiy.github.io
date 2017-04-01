@@ -1,0 +1,29 @@
+/***********************
+ * WATERWHEEL CAROUSEL *
+ ***********************/
+#waterwheel-carousel-default {
+  height:450px;
+  width:1140px;
+  margin:0 auto;
+  display:flex; 
+  align-items: baseline;
+  position:relative;
+  padding-bottom:80px;
+}
+#waterwheel-carousel-default a {
+  color:#222;
+}
+#waterwheel-carousel-default .carousel-images img {
+  visibility:hidden;
+  cursor:pointer;
+}
+#waterwheel-carousel-default .carousel-controls .carousel-prev {
+  position:absolute;
+  top:38%;
+  left:0px;
+}
+#waterwheel-carousel-default .carousel-controls .carousel-next {
+  position:absolute;
+  top:38%;
+  right:0px;
+}
